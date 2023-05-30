@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import { ErrorMessage } from '../Components/ErrorMessage/ErrorMessage';
+import './Form.scss'
 
 export const Form = () => {
 
@@ -12,21 +13,30 @@ export const Form = () => {
 
   return (
     <>
-        <h2>
-            Fromulario de contacto
-        </h2>
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <input type='text' {...register("name", {required: true})}/>
+        
+        <form onSubmit={handleSubmit(onSubmit)} className='form'>
+            <h2 className='form_title'>
+                Fromulario de contacto
+            </h2>
+            <p>Nombre:</p>
+            <input type='text' {...register("name", {required: true})} placeholder='Ej: María'/>
             <ErrorMessage error={errors.name}/>
 
-            <input type='text' {...register("surname", {required: true, minLength: 5})}/>
+            <p>Apellidos:</p>
+            <input type='text' {...register("surname", {required: true, minLength: 5})} placeholder='Ej: Del Monte'/>
             <ErrorMessage error={errors.surname}/>
 
-            <input type='number' {...register("age", {required: true, min:18})}/>
+            <p>Teléfono:</p>
+            <input type='mobile' {...register("age", {required: true, minLength: 9})} placeholder='Ej: 555 555 555'/>
             <ErrorMessage error={errors.age}/>
 
-            <input type='email' {...register("email", {required:true})}/>
+            <p>Email:</p>
+            <input type='email' {...register("email", {required:true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i })} placeholder='Ej: mariaDelMonte@mariaDelMonte.com'/>
             <ErrorMessage error={errors.email}/>
+
+            <p>¿Quiéres saber algo más? Escríbenos:</p>
+            <textarea {...register("coments", {required:true, minLength: 50})} rows="10" cols="50"/>
+            <ErrorMessage error={errors.coments}/>
 
             <button>Enviar </button>
         </form>

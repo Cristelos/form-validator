@@ -1,11 +1,11 @@
 
-import './App.css';
+import './App.scss';
 import { Form } from './Form/Form';
 
 function App() {
   return (
     <>
-      <article>
+      <article className='contenedor'>
         <Form/>
       </article>
     </>
