@@ -13,7 +13,13 @@ code {
 }
 
 .contenedor{
-  padding: 25px 45px;
-  background-color: #f2ebe3;
-  margin: 20px;
+  padding: 10px 38px;
+    background-color: #eee3d6;
+    margin: 20px;
+    height: 92vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }

@@ -1,10 +1,92 @@
+.title{
+    font-size: 4.4rem;
+    color: white;
+    letter-spacing: -0.3rem;
+}
+
 .form{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    max-width: 590px;
+    justify-content: center;
 
-    &_title{
-        font-size: 4.4rem;
+    label{
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    input{
+        width: 100%;
+        border: none;
+        padding: 5px 9px;
+        margin-top: 6px;
+        background-color: #ded6d600;
+        border-bottom: 0.9px solid black;
+    }
+
+    .name{
+        flex: 5 0 275px;
+    }
+
+    .surname{
+        flex: 5 0 275px;
+    }
+
+    .phone{
+        flex: 3 1 275px;
+    }
+
+    .email{
+        flex: 3 1 275px;
+    }
+
+    .textarea{
+        // flex: 1 1 130px;
+        width: 100%;
+
+        &_input{
+            width: 100%;
+            margin-top: 8px;
+            height: 100px;
+            border: none;
+            padding: 5px 9px;
+            background-color: #ded6d600;
+            border-bottom: 0.9px solid black;
+        }
+
+        
+    }
+
+    &_error{
+        font-size: 12px;
+        color: #e10909;
+        background-color: #f2d7d7;
+        width: 100%;
+        max-width: 160px;
+        height: 20%;
+        text-align: center;
+        border-radius: 3px;
+    }
+
+    button{
+        flex: 1 0 40px;
+        width: 80%;
+        height: 35px;
+        max-width: 150px;
+        border: none;
+        cursor: pointer;
+        border-radius: 53px;
+        background-color: black;
         color: white;
-        letter-spacing: -0.3rem;
+        transition: 0.4s;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    button:hover{
+        background-color: white;
+        color: black;
     }
 }
